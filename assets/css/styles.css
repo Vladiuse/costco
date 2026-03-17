@@ -1,0 +1,43 @@
+:root {
+    --blue: #005dab;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+header {
+}
+.header__top {
+    padding: 4px;
+    text-align: center;
+    background-color: var(--blue);
+    color: white;
+}
+.responsive-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+@media (min-width: 768px) {
+    .responsive-text {
+        font-size: 1.125rem;
+        line-height: 1.3;
+    }
+}
