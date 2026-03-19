@@ -78,6 +78,93 @@ header {
 .header-nav li svg {
     height: 16px;
 }
+.header__center__items {
+    gap: 24px;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+.header__center__item {
+    display: flex;
+    justify-content: end;
+}
+.header__center__item:nth-child(2) {
+    flex: 1;
+}
+.header__center .desktop-logo {
+    height: 50px;
+    max-width: 271px;
+    min-width: 170px;
+}
+.header-search {
+    background-color: #ffffff;
+    border: 1px solid var(--blue);
+    height: 40px;
+    width: 100%;
+    display: flex;
+}
+.header-search .search-icon-wrap {
+    width: 90px;
+    display: flex;
+    justify-content: end;
+}
+.header-search .search-icon {
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-search .search-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--blue);
+}
+.header-search .input-wrapper {
+    flex: 1;
+    display: flex;
+}
+.header-search input {
+    border: none;
+    width: 100%;
+    color: #707070;
+    padding: 2.5px 4px 2.5px 8px;
+}
+.header-search input:focus {
+     outline: none;
+    border-radius: 3px;
+    border: 2px solid #005dab;
+    box-shadow: 0px 0px 4px 0px #005dab;
+}
+.header__center ul {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+    list-style: none;
+    color: #0060a9;
+    gap: 16px;
+}
+.header__center ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    padding: 0 16px;
+}
+.header__center ul li:last-child svg {
+    width: 30px;
+    height: 30px;
+}
+.header__center ul li:nth-child(2) {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+.header__center ul li:hover {
+    text-decoration: underline;
+}
 .header__catalog {
     background-color: var(--blue);
 }
@@ -100,7 +187,7 @@ header {
     padding-left: 3px;
     padding-top: 10px;
 }
-.header__catalog ul li:first-child{
+.header__catalog ul li:first-child {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -108,10 +195,11 @@ header {
     font-size: 1rem;
     font-weight: 700;
 }
-.header__catalog ul li:first-child svg{
-    width: 20px;height: 20px;
+.header__catalog ul li:first-child svg {
+    width: 20px;
+    height: 20px;
 }
-.header__catalog ul li:first-child span{
+.header__catalog ul li:first-child span {
     margin-left: 4px;
 }
 .responsive-text {
