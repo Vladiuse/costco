@@ -12,7 +12,7 @@
 
 .desktop,
 .mob {
-    display: none;
+    display: none !important;
 }
 
 /* desktop */
@@ -40,6 +40,12 @@
     .container {
         padding-left: 16px;
         padding-right: 16px;
+    }
+}
+@media (min-width: 0px) {
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 header {
@@ -169,6 +175,21 @@ header {
 }
 .header__center ul li:hover {
     text-decoration: underline;
+}
+.header__center .menu-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 91px;
+    background-color: rgb(0, 93, 171);
+    color: #fff;
+    border: none;
+
+}
+.header__center .menu-button span{
+    margin-left: 4px;
+    font-size: 1.125rem;
 }
 .header__catalog {
     background-color: var(--blue);
