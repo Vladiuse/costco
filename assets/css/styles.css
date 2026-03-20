@@ -3,6 +3,10 @@
     --bg-header: #eeeeee;
     --bg-footer: #eeeeee;
 }
+h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+}
 h2 {
     margin: 0;
     font-weight: 400;
@@ -10,6 +14,11 @@ h2 {
     line-height: 1.3;
     color: #333333;
     padding-bottom: 12px;
+}
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.875rem;
+    }
 }
 .responsive-text {
     font-size: 1rem;
@@ -28,19 +37,6 @@ h2 {
     margin-right: auto;
     margin: 0 auto;
 }
-
-.desktop,
-.mob {
-    display: none !important;
-}
-
-/* desktop */
-@media (min-width: 769px) {
-    .desktop {
-        display: flex !important;
-    }
-}
-
 /* mobile */
 @media (max-width: 768px) {
     .mob {
@@ -67,6 +63,19 @@ h2 {
         padding-right: 12px;
     }
 }
+
+.desktop,
+.mob {
+    display: none !important;
+}
+
+/* desktop */
+@media (min-width: 769px) {
+    .desktop {
+        display: flex !important;
+    }
+}
+
 .question {
     display: flex;
     align-items: center;
@@ -120,4 +129,44 @@ h2 {
     width: 28px;
     height: 28px;
     color: var(--blue);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0.625rem 1rem;
+    height: 2.5rem;
+    width: 100%;
+    margin: 0;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 93, 171, 0.5);
+}
+.btn-primary {
+    background-color: #005dab;
+    color: #fff;
+    border: 1px solid #005dab;
+}
+.btn-primary:hover {
+    background-color: #004d89;
+    border-color: #004d89;
+    color: #fff;
+}
+.btn-outline-primary {
+    background-color: #fff;
+    color: #005dab;
+    border: 1px solid #005dab;
+}
+.btn-outline-primary:hover {
+    background-color: #ededed;
+    color: #005dab;
+    border-color: #005dab;
 }
