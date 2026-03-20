@@ -399,13 +399,17 @@ footer hr {
 .footer__topics-item {
     flex: 1;
 }
-.footer__topic-title{
+.footer__topic-title {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
 }
-.footer__topic-title svg{
+.footer__topic-title svg {
     display: none;
+    transition: transform 0.3s ease;
+}
+.footer__topic-title.open svg {
+    transform: rotate(180deg);
 }
 .footer__topic-links {
     list-style: none;
@@ -418,10 +422,6 @@ footer hr {
     line-height: 1.7;
     color: #5f5f5f;
 }
-.footer__topic-title.is-open + .footer__topic-links {
-    max-height: 600px; /* гарантированно больше контента */
-    opacity: 1;
-}
 .footer__topic-links li {
     cursor: pointer;
 }
@@ -433,8 +433,15 @@ footer hr {
     .footer__topics {
         flex-direction: column;
     }
+    .footer__topic{
+        
+    }
     .footer__topic-links {
+        padding: 16px;
         display: none;
+    }
+    .footer__topic-title.open + .footer__topic-links {
+        display: block;
     }
     .footer__topic {
         border-top: 1px solid #cccccc;
@@ -447,10 +454,7 @@ footer hr {
         font-weight: 700;
         color: #333333;
     }
-    .footer__topic ul{
-        padding: 16px;
-    }
-    .footer__topic-title svg{
+    .footer__topic-title svg {
         display: block;
     }
 }
