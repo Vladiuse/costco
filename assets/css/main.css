@@ -332,7 +332,7 @@ footer hr {
 }
 
 /* DELIVERY BAR */
-.delivery-bar{
+.delivery-bar {
     background: #fafafa;
     box-shadow: 0px 0px 4px 0px #00000040;
 }
@@ -367,4 +367,42 @@ footer hr {
     text-wrap: wrap;
     color: rgb(0, 128, 0);
     padding-left: 20px;
+}
+
+.breadcrumb-wrapper {
+    padding: 24px 0;
+    line-height: 1.5;
+    color: #5f5f5f;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #333333;
+}
+
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li::after {
+    content: "/";
+    margin-left: 0.5rem;
+    color: #999;
+}
+
+.breadcrumb li:last-child::after {
+    content: "";
+}
+
+.breadcrumb li {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.breadcrumb li span:hover {
+    text-decoration: underline;
 }
