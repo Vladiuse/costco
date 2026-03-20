@@ -407,7 +407,7 @@ footer hr {
 .footer__topic-title svg{
     display: none;
 }
-.footer__topic ul {
+.footer__topic-links {
     list-style: none;
     margin-top: 0;
     padding-left: 0;
@@ -418,10 +418,14 @@ footer hr {
     line-height: 1.7;
     color: #5f5f5f;
 }
-.footer__topic ul li {
+.footer__topic-title.is-open + .footer__topic-links {
+    max-height: 600px; /* гарантированно больше контента */
+    opacity: 1;
+}
+.footer__topic-links li {
     cursor: pointer;
 }
-.footer__topic ul li:hover {
+.footer__topic-links li:hover {
     text-decoration: underline;
 }
 
