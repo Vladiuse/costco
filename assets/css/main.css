@@ -188,6 +188,13 @@ footer {
     flex-direction: column;
     gap: 32px;
 }
+footer h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    padding-bottom: 12px;
+}
 footer hr {
     margin: 0;
     margin-bottom: 0px;
