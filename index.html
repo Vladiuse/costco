@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/font.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -156,7 +158,7 @@
     </div>
     <footer>
         <div class="container">
-            <div class="footer__pre-footer">
+            <div class="footer__pre-footer desktop">
                 <div class="footer__pre-footer-item">
                     <h2>
                         Customer Service
@@ -190,7 +192,7 @@
             </div>
         </div>
         <div class="container">
-            <hr>
+            <hr class="desktop">
             <div class="footer__topics">
                 <div class="footer__topics-item">
                     <div class="footer__topic">
@@ -306,7 +308,7 @@
             </div>
         </div>
         <div class="container">
-            <hr>
+            <hr class="desktop">
             <div class="footer__bottom-footer">
                 <div class="footer__links">
                     <ul>
@@ -346,41 +348,11 @@
             </div>
         </div>
     </footer>
-    <div id="box">
-    Initial Content
-    <div class="hidden">
-        This is hidden content
-    </div>
-</div>
-<style>
-    #box {
-    height:auto;
-    background:#000;
-    color:#fff;
-    cursor:pointer;
-}
-.hidden {
-    height:0px;
-       -webkit-transition:height, 0.5s linear;
-    -moz-transition: height, 0.5s linear;
-    -ms-transition: height, 0.5s linear;
-    -o-transition: height, 0.5s linear;
-    transition: height, 0.5s linear;
-}
-    .hidden.open {
-        height:200px;
-     -webkit-transition:height, 0.5s linear;
-    -moz-transition: height, 0.5s linear;
-    -ms-transition: height, 0.5s linear;
-    -o-transition: height, 0.5s linear;
-    transition: height, 0.5s linear;
-    }
-</style>
+
     <script>
-        document.querySelectorAll(".footer__topic-title").forEach((title) => {
-            title.addEventListener("click", () => {
-                title.classList.toggle("open");
-            });
+        $(".footer__topic-title").on("click", function () {
+            $(this).toggleClass("open"); 
+            $(this).next(".footer__topic-links").stop(true, true).slideToggle(250);
         });
     </script>
 </body>
