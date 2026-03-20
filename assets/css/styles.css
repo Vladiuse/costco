@@ -121,8 +121,14 @@ h2 {
     height: 28px;
     color: var(--blue);
 }
-
-
+.footer__pre-footer .search-input {
+    border: 1px solid #222;
+    border-radius: 4px;
+}
+.footer__pre-footer .search-input-wrapper input:focus {
+    box-shadow: none;
+    border: none;
+}
 
 header {
     background-color: var(--bg-header);
