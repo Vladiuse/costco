@@ -443,21 +443,43 @@ footer hr {
     background-color: #005dab;
 }
 
-
-.product-cols{
+.product-cols {
     display: flex;
     gap: 16px;
-      overflow: visible;
+    overflow: visible;
 }
 
-.product-cols .left{
+.product-cols .left {
     flex: 14;
 }
-.product-cols .right{
+.product-cols .right {
     flex: 10;
 }
 
 .product-cols .product-sticky {
-  position: sticky;
+    position: sticky;
     top: 0;
+}
+
+.desktop-product-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.desktop-product-images > *:first-child {
+  grid-column: 1 / -1; /* первый элемент на всю ширину */
+  aspect-ratio: 1 / 1; /* квадрат */
+}
+
+.desktop-product-images > *:not(:first-child) {
+  aspect-ratio: 1 / 1; /* квадрат */
+}
+
+.desktop-product-images .desktop-product-image{
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+.desktop-product-images .desktop-product-image img{
+    width: 100%;
 }
