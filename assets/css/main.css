@@ -442,3 +442,22 @@ footer hr {
 .badge-blue {
     background-color: #005dab;
 }
+
+
+.product-cols{
+    display: flex;
+    gap: 16px;
+      overflow: visible;
+}
+
+.product-cols .left{
+    flex: 14;
+}
+.product-cols .right{
+    flex: 10;
+}
+
+.product-cols .product-sticky {
+  position: sticky;
+    top: 0;
+}
