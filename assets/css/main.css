@@ -462,24 +462,47 @@ footer hr {
 }
 
 .desktop-product-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 .desktop-product-images > *:first-child {
-  grid-column: 1 / -1; /* первый элемент на всю ширину */
-  aspect-ratio: 1 / 1; /* квадрат */
+    grid-column: 1 / -1; /* первый элемент на всю ширину */
+    aspect-ratio: 1 / 1; /* квадрат */
 }
 
 .desktop-product-images > *:not(:first-child) {
-  aspect-ratio: 1 / 1; /* квадрат */
+    aspect-ratio: 1 / 1; /* квадрат */
 }
 
-.desktop-product-images .desktop-product-image{
+.desktop-product-image {
+    position: relative;
     border: 1px solid #cccccc;
     border-radius: 4px;
+    cursor: grab;
 }
-.desktop-product-images .desktop-product-image img{
+.desktop-product-image img {
     width: 100%;
+}
+.desktop-product-image .magnifier {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #000;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+.desktop-product-image .magnifier:hover{
+    background-color: #eee;
+}
+.desktop-product-image .magnifier img {
+    width: 18px;
 }
