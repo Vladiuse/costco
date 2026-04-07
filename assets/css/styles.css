@@ -29,6 +29,27 @@ h5 {
     font-size: 0.75rem; /* 12px */
 }
 
+body {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Costco Sans Web;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+a {
+    color: rgb(51, 51, 51);
+}
+.text-sm {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
 /* Mobile — max-width: 768px */
 @media (max-width: 768px) {
     h1 {
@@ -46,6 +67,74 @@ h5 {
     h5 {
         font-size: 0.6875rem; /* 11px */
     }
+}
+
+.mb-0 {
+    margin-bottom: 0rem;
+}
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+.mb-3 {
+    margin-bottom: 0.75rem;
+}
+.mb-4 {
+    margin-bottom: 1rem;
+}
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+.mb-7 {
+    margin-bottom: 1.75rem;
+}
+.mb-8 {
+    margin-bottom: 2rem;
+}
+.mb-9 {
+    margin-bottom: 2.25rem;
+}
+.mb-10 {
+    margin-bottom: 2.5rem;
+}
+
+.mt-0 {
+    margin-top: 0rem;
+}
+.mt-1 {
+    margin-top: 0.25rem;
+}
+.mt-2 {
+    margin-top: 0.5rem;
+}
+.mt-3 {
+    margin-top: 0.75rem;
+}
+.mt-4 {
+    margin-top: 1rem;
+}
+.mt-5 {
+    margin-top: 1.25rem;
+}
+.mt-6 {
+    margin-top: 1.5rem;
+}
+.mt-7 {
+    margin-top: 1.75rem;
+}
+.mt-8 {
+    margin-top: 2rem;
+}
+.mt-9 {
+    margin-top: 2.25rem;
+}
+.mt-10 {
+    margin-top: 2.5rem;
 }
 
 .responsive-text {
