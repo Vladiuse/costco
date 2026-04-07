@@ -3,6 +3,9 @@
     --bg-header: #eeeeee;
     --bg-footer: #eeeeee;
 }
+html {
+    scroll-behavior: smooth;
+}
 h1,
 h2,
 h3,
@@ -302,6 +305,34 @@ a {
     border-color: #005dab;
 }
 
-main{
+main {
     margin-bottom: 60px;
+}
+
+.back-to-top {
+    display: none;
+    right: 0px;
+  bottom: 72px;
+  position: fixed;
+  color: rgb(0, 93, 171);
+  border: 1px solid rgb(0, 93, 171);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 0px;
+  cursor: pointer;
+  -moz-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 55px;
+  padding: 4px 8px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.back-to-top span{
+    margin: -4px 0px 0px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+.back-to-top.show {
+    display: flex;
 }

@@ -476,10 +476,6 @@ footer hr {
     aspect-ratio: 1 / 1; /* квадрат */
 }
 
-.desktop-product-images > *:not(:first-child) {
-    aspect-ratio: 1 / 1; /* квадрат */
-}
-
 .desktop-product-image {
     position: relative;
     border: 1px solid #cccccc;

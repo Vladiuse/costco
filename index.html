@@ -309,7 +309,12 @@
                                     </div>
                                     <div class="product-spec-price__price-info">
                                         <span>Online Price</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false" aria-hidden="true" fill="none" class="mui-187dcg7"><path fill="currentColor" fill-rule="evenodd" d="M12 3.25c-4.825 0-8.75 3.925-8.75 8.75s3.925 8.75 8.75 8.75 8.75-3.925 8.75-8.75S16.825 3.25 12 3.25M12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10m0-4.47a1 1 0 0 1-1-1v-5.565a1 1 0 1 1 2 0v5.565a1 1 0 0 1-1 1m-.837-8.993q.363.315.848.315.47 0 .829-.318.36-.319.359-.878 0-.5-.341-.844a1.16 1.16 0 0 0-.847-.343q-.51 0-.86.342a1.14 1.14 0 0 0-.351.846q0 .567.363.88" clip-rule="evenodd"></path></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false" aria-hidden="true" fill="none"
+                                            class="mui-187dcg7">
+                                            <path fill="currentColor" fill-rule="evenodd"
+                                                d="M12 3.25c-4.825 0-8.75 3.925-8.75 8.75s3.925 8.75 8.75 8.75 8.75-3.925 8.75-8.75S16.825 3.25 12 3.25M12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10m0-4.47a1 1 0 0 1-1-1v-5.565a1 1 0 1 1 2 0v5.565a1 1 0 0 1-1 1m-.837-8.993q.363.315.848.315.47 0 .829-.318.36-.319.359-.878 0-.5-.341-.844a1.16 1.16 0 0 0-.847-.343q-.51 0-.86.342a1.14 1.14 0 0 0-.351.846q0 .567.363.88"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
                                     </div>
                                     <span class="product-spec-price__price-description">* Some info about price</span>
                                 </div>
@@ -534,11 +539,27 @@
             </div>
         </div>
     </footer>
-
+    <div id="back-to-top" class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false" aria-hidden="true" fill="none" class="mui-12g48lj">
+            <path fill="currentColor" fill-rule="evenodd"
+                d="M21.869 15.744a.875.875 0 0 1-1.238 0L12 7.112l-8.631 8.632a.875.875 0 0 1-1.238-1.238l9.243-9.243a.885.885 0 0 1 1.252 0l9.243 9.243a.875.875 0 0 1 0 1.238" clip-rule="evenodd">
+            </path>
+        </svg>
+        <span>Top</span>
+    </div>
     <script>
         $(".footer__topic-title").on("click", function () {
             $(this).toggleClass("open");
             $(this).next(".footer__topic-links").stop(true, true).slideToggle(250);
+        });
+    </script>
+    <script>
+        const btn = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            btn.classList.toggle("show", window.scrollY > 300);
+        });
+        btn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     </script>
 </body>
