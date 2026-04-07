@@ -590,7 +590,62 @@ footer hr {
     display: flex;
     gap: 8px;
 }
-.product-spec-description__rank img{
+.product-spec-description__rank img {
     height: 28px;
     margin-top: -1px;
+}
+
+.product-spec-price__price-wrapper {
+    display: flex;
+}
+
+.product-spec-price__currency {
+    margin: 0px;
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+    font-size: 1.125rem;
+    line-height: 0.889;
+}
+.product-spec-price__price-amount {
+    margin: 0px;
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+    font-size: 2.5rem;
+    line-height: 0.8;
+}
+
+.product-spec-price__price-cents {
+    margin: 0px;
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+    font-size: 1.125rem;
+    line-height: 0.889;
+}
+
+.product-spec-price__price-info {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.product-spec-price__price-info svg {
+    width: 24px;
+    height: 24px;
+    color: #777;
+    border-radius: 50%;
+}
+.product-spec-price__price-info svg:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+.product-spec-price__price-description {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    font-optical-sizing: none;
+    font-variation-settings: "opsz" 10;
+    color: #707070;
 }
