@@ -525,3 +525,28 @@ footer hr {
         border-radius: 0;
     }
 }
+.desktop-product-image .product-play {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.desktop-product-image .product-play .play-wrapper {
+    width: 210px;
+    height: 210px;
+    background: rgb(51, 51, 51, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.desktop-product-image .product-play img {
+    width: 130px;
+    height: 130px;
+    filter: invert(1);
+    margin-left: 15px;
+}
