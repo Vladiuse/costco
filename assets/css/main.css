@@ -522,7 +522,7 @@ footer hr {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
 }
-.product-spec a{
+.product-spec a {
     text-decoration: underline;
 }
 
@@ -752,7 +752,7 @@ footer hr {
     text-transform: none;
     text-decoration: none;
 }
-.reviews-rank__rank-reviews-count{
+.reviews-rank__rank-reviews-count {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -763,6 +763,25 @@ footer hr {
 .reviews-rank__rank-stars img {
     width: 13.5px;
     height: 13.5px;
-    filter: invert(29%) sepia(94%) saturate(1764%) hue-rotate(186deg)
-          brightness(91%) contrast(101%);
+    filter: invert(29%) sepia(94%) saturate(1764%) hue-rotate(186deg) brightness(91%) contrast(101%);
+}
+
+#user-rank {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-rank__star {
+    margin: 4.5px;
+    width: 51px;
+    height: 51px;
+    border: 1px solid rgb(0, 96, 169);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.user-rank__star.active {
+    background-color: rgb(0, 96, 169);
 }
