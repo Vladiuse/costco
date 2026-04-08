@@ -670,3 +670,17 @@ footer hr {
     font-size: 0.875rem;
     color: #333333;
 }
+
+.reviews-rank{
+    display: flex;
+    flex-direction: row;
+}
+.reviews-rank-item{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.reviews-rank-item p{
+    margin: 0;
+}
