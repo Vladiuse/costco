@@ -414,3 +414,21 @@ main {
 .accordion-body {
     padding: 8px 16px 16px;
 }
+
+
+.table-custom {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-custom th,
+.table-custom td {
+  padding: 12px;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  text-align: left;
+}
+
+.table-custom tr:nth-child(odd) {
+  background-color: #fafafa;
+}
