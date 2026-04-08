@@ -635,20 +635,30 @@
                                                         Review this Product
                                                     </p>
                                                     <div id="user-rank">
-                                                        <div class="user-rank__star">
-                                                            <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                        <div class="user-rank__star-wrapper">
+                                                            <div class="user-rank__star">
+                                                                <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                            </div>
                                                         </div>
-                                                        <div class="user-rank__star">
-                                                            <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                        <div class="user-rank__star-wrapper">
+                                                            <div class="user-rank__star">
+                                                                <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                            </div>
                                                         </div>
-                                                        <div class="user-rank__star">
-                                                            <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                        <div class="user-rank__star-wrapper">
+                                                            <div class="user-rank__star">
+                                                                <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                            </div>
                                                         </div>
-                                                        <div class="user-rank__star">
-                                                            <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                        <div class="user-rank__star-wrapper">
+                                                            <div class="user-rank__star">
+                                                                <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                            </div>
                                                         </div>
-                                                        <div class="user-rank__star">
-                                                            <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                        <div class="user-rank__star-wrapper">
+                                                            <div class="user-rank__star">
+                                                                <img src="./assets/images/icons/rank_star_user.svg" alt="">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <p>
@@ -885,19 +895,26 @@
         });
     </script>
     <script>
-        const stars = document.querySelectorAll("#user-rank .user-rank__star");
+        var isUserRankProduct = false
+        const starsWrappers = document.querySelectorAll("#user-rank .user-rank__star-wrapper");
         let selectedIndex = -1;
 
         function setActive(index) {
-            stars.forEach((star, i) => {
+            starsWrappers.forEach((starWrapper, i) => {
+                var star = starWrapper.querySelector(".user-rank__star")
                 star.classList.toggle("active", i <= index);
             });
         }
 
-        stars.forEach((star, index) => {
-            star.addEventListener("mouseenter", () => setActive(index));
+        starsWrappers.forEach((star, index) => {
+            star.addEventListener("mouseenter", () => {
+                if (!isUserRankProduct){
+                    setActive(index)
+                }
+            });
             star.addEventListener("mouseleave", () => setActive(selectedIndex));
             star.addEventListener("click", () => {
+                isUserRankProduct = true
                 selectedIndex = index;
                 setActive(index);
             });

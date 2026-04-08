@@ -771,8 +771,10 @@ footer hr {
     flex-direction: row;
 }
 
+.user-rank__star-wrapper{
+    padding-left: 5px;
+}
 .user-rank__star {
-    margin: 4.5px;
     width: 51px;
     height: 51px;
     border: 1px solid rgb(0, 96, 169);
