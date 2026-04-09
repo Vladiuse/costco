@@ -668,6 +668,61 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- COMMENTS -->
+                                    <div class="comments-block">
+                                        <div class="comments">
+                                            <!-- COMMENT -->
+                                            <div class="comment">
+                                                <div class="comment-header">
+                                                    <div class="comment-stars d-flex flex-direction-columns">
+                                                        <img src="./assets/images/icons/review_star_on.svg" alt="">
+                                                        <img src="./assets/images/icons/review_star_on.svg" alt="">
+                                                        <img src="./assets/images/icons/review_star_on.svg" alt="">
+                                                        <img src="./assets/images/icons/review_star_on.svg" alt="">
+                                                        <img src="./assets/images/icons/review_star_on.svg" alt="">
+                                                    </div>
+                                                    <div class="comment-title">
+                                                        <span>What's the problem?</span>
+                                                    </div>
+                                                    <div class="comment-user">
+                                                        <span>Scotrider</span>
+                                                    </div>
+                                                </div>
+                                                <div class="comment-body">
+                                                    <div class="comment-verification d-flex gap-1">
+                                                        <img src="./assets/images/icons/comment-verification.svg" alt="">
+                                                        <span>Verified Purchaser</span>
+                                                    </div>
+                                                    <div class="comment-date">
+                                                        <span>a year ago</span>
+                                                    </div>
+                                                    <div class="comment-text">
+                                                        <p>I bought these when Costco put them on sale. I have had a couple pair of rather expensive ear buds with noise cancellation. The first pair was Sony $300+ and they lasted about a year with infrequent use. Then the battery started dying in 30 minutes or less. Bought a pair of Sennhisers, they lasted about 2 months and the noise cancellation stopped working. The AirPods 4 worked great, for a while. In just 3 weeks the noise cancellation stopped working and now they won't take a full charge. I am going to return them to Costco. It seems to me that no one has figured out how to keep the noise cancellation working and batteries taking charges.</p>
+                                                    </div>
+                                                    <div class="comment-summary d-flex align-items-center gap-2">
+                                                         <img src="./assets/images/icons/circle-cross.svg" alt="">
+                                                        <span>No, I do not recommend this product.</span>
+                                                    </div>
+                                                    <div class="comment-photos d-flex gap-1">
+                                                        <div class="comment-img-wrapper">
+                                                            <img src="./assets/images/comments/c11.jpeg" alt="">
+                                                        </div>
+                                                        <div class="comment-img-wrapper">
+                                                            <img src="./assets/images/comments/c12.jpeg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="comment-reaction d-flex gap-2">
+                                                        <span>Helpful?</span>
+                                                        <img src="./assets/images/icons/like-innactive.svg" alt="">
+                                                        <span>(16)</span>
+                                                        <img src="./assets/images/icons/dislike-innactive.svg" alt="">
+                                                        <span>(7)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- COMMENT -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -908,7 +963,7 @@
 
         starsWrappers.forEach((star, index) => {
             star.addEventListener("mouseenter", () => {
-                if (!isUserRankProduct){
+                if (!isUserRankProduct) {
                     setActive(index)
                 }
             });

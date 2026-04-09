@@ -773,7 +773,7 @@ footer hr {
     flex-direction: row;
 }
 
-.user-rank__star-wrapper{
+.user-rank__star-wrapper {
     padding-left: 5px;
 }
 .user-rank__star {
@@ -788,4 +788,75 @@ footer hr {
 }
 .user-rank__star.active {
     background-color: rgb(0, 96, 169);
+}
+.comment-body {
+    margin-top: 8px;
+    padding-left: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.comments-block {
+    margin-top: 20px;
+}
+.comments {
+    padding: 0 20px;
+}
+.comment-stars {
+    margin-bottom: 8px;
+}
+.comment-stars img {
+    width: 13.5px;
+    height: 13.5px;
+}
+
+.comment-title {
+    color: rgb(0, 96, 169);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Costco Sans Web;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin: 0px 0px 10px;
+    word-break: break-word;
+}
+
+.comment-user {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Costco Sans Web;
+}
+
+.comment-verification {
+    font-size: 10px;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.comment-img-wrapper{
+    width: 175px;
+    height: 175px;
+    padding: 2px;
+    overflow: hidden;
+}
+.comment-photos img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.comment-summary img{
+    width: 14px;
+    height: 14px;
+}
+
+.comment-photos img:hover{
+    transform: scale(1.05);
 }

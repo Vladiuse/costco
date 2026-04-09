@@ -1,0 +1,11 @@
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+  <title>7 Not helpful</title>
+  <path 
+    d="M7.146 11.4v3.2a2.4 2.4 0 002.4 2.4l3.2-7.2V1H3.722a1.6 1.6 0 00-1.6 1.36l-1.104 7.2a1.6 1.6 0 001.6 1.84h4.528zm5.6-10.4h2.136a1.848 1.848 0 011.864 1.6v5.6a1.848 1.848 0 01-1.864 1.6h-2.136V1z" 
+    stroke="rgb(48, 113, 169)" 
+    fill="none" 
+    fill-rule="evenodd" 
+    stroke-linecap="round" 
+    stroke-linejoin="round">
+  </path>
+</svg>
