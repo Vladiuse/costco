@@ -367,7 +367,7 @@
                                         <a href="#">View Product Details</a>
                                     </div>
                                 </div>
-                                <div class="product-spec">
+                                <div class="product-spec" id="start-quiz-block">
                                     <h2>
                                         <b>To get AirPods 4, take a short survey.</b>
                                     </h2>
@@ -995,7 +995,7 @@
                                                 </div>
                                             </div>
                                             <!-- COMMENT -->
-                                             <!-- COMMENT -->
+                                            <!-- COMMENT -->
                                             <div class="comment">
                                                 <div class="comment-header">
                                                     <div class="comment-stars d-flex flex-direction-columns">
@@ -1021,14 +1021,17 @@
                                                         <span>5 days ago</span>
                                                     </div>
                                                     <div class="comment-text">
-                                                        <p>So much better! These blow away my old AirPod Pro's. First, they dont have the dumb rubber tips that never suction right and are NOT comfortable... this new design fits so much better and the noise cancellation is surprisingly good with this type of design! Another thing to note, is the sound quality for music has improved a ton as well! Couldn't be happier to add these bad boys to my Apple collection. Oh, and pro tip... you can sell your old charging case from an old set of AirPods online. :)</p>
+                                                        <p>So much better! These blow away my old AirPod Pro's. First, they dont have the dumb rubber tips that never suction right and are NOT
+                                                            comfortable... this new design fits so much better and the noise cancellation is surprisingly good with this type of design! Another thing
+                                                            to note, is the sound quality for music has improved a ton as well! Couldn't be happier to add these bad boys to my Apple collection. Oh,
+                                                            and pro tip... you can sell your old charging case from an old set of AirPods online. :)</p>
                                                     </div>
                                                     <div class="comment-summary d-flex align-items-center gap-2">
-                                                         <img src="./assets/images/icons/circle-mark.svg" alt="">
+                                                        <img src="./assets/images/icons/circle-mark.svg" alt="">
                                                         <span>Yes, I recommend this product.</span>
                                                     </div>
                                                     <div class="comment-photos d-flex gap-1">
-                                                        
+
                                                     </div>
                                                     <div class="comment-reaction d-flex gap-2">
                                                         <span>Helpful?</span>
@@ -1253,6 +1256,12 @@
         </svg>
         <span>Top</span>
     </div>
+    <div id="bottom-bar" class="hidden">
+        <h2>
+            <b>To get AirPods 4, take a short survey.</b>
+        </h2>
+        <button class="btn btn-primary">Start Quiz</button>
+    </div>
     <script>
         $(".footer__topic-title").on("click", function () {
             $(this).toggleClass("open");
@@ -1293,6 +1302,37 @@
                 setActive(index);
             });
         });
+    </script>
+    <script>
+        const target = document.getElementById("start-quiz-block");
+        const bottomBar = document.getElementById("bottom-bar");
+
+
+        const observer = new IntersectionObserver(([entry]) => {
+            const { top, bottom } = entry.boundingClientRect;
+
+            // блок виден → панель скрыта
+            if (entry.isIntersecting) {
+                bottomBar.classList.add("hidden");
+                return;
+            }
+
+            // блок выше экрана → показать панель
+            if (bottom < 0) {
+                bottomBar.classList.remove("hidden");
+                const height = bottomBar.offsetHeight;
+                document.querySelector("footer").style.paddingBottom = `${height}px`;
+                console.log(height)
+                return;
+            }
+
+            // блок ниже экрана → панель скрыта
+            bottomBar.classList.add("hidden");
+        }, {
+            threshold: 0
+        });
+
+        observer.observe(target);
     </script>
 </body>
 

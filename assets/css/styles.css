@@ -423,7 +423,7 @@ main {
 .back-to-top {
     display: none;
     right: 0px;
-    bottom: 72px;
+    bottom: 120px;
     position: fixed;
     color: rgb(0, 93, 171);
     border: 1px solid rgb(0, 93, 171);
