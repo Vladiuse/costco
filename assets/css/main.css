@@ -649,6 +649,13 @@ footer hr {
     color: #707070;
 }
 
+.product-spec-price__discount-time {
+    font-weight: 700;
+    color: rgb(0, 128, 0);
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
 .product-details {
     margin-top: 20px;
 }
@@ -802,7 +809,7 @@ footer hr {
 .comments {
     padding: 0 20px;
 }
-.comment{
+.comment {
     margin-bottom: 50px;
 }
 .comment-stars {
@@ -840,14 +847,14 @@ footer hr {
     text-transform: uppercase;
     vertical-align: middle;
 }
-.comment-img-wrapper{
+.comment-img-wrapper {
     width: 175px;
     height: 175px;
     padding: 2px;
     overflow: hidden;
 }
 @media (max-width: 768px) {
-    .comment-photos{
+    .comment-photos {
         flex-direction: column;
     }
 }
@@ -861,36 +868,36 @@ footer hr {
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.comment-summary img{
+.comment-summary img {
     width: 14px;
     height: 14px;
 }
 
-.comment-photos img:hover{
+.comment-photos img:hover {
     transform: scale(1.05);
 }
 
-#bottom-bar{
-  background-color: rgb(255, 255, 255);
-  display: none;
-  position: fixed;
-  flex-direction: column;
-  gap: 8px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
-  padding: 12px 16px 32px;
-  border-radius: 0px;
-  border: 0px solid;
-  width: 100%;
-  z-index: 1000;
-  -moz-box-pack: justify;
-  bottom: 0px;
+#bottom-bar {
+    background-color: rgb(255, 255, 255);
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
+    padding: 12px 16px 32px;
+    border-radius: 0px;
+    border: 0px solid;
+    width: 100%;
+    z-index: 1000;
+    -moz-box-pack: justify;
+    bottom: 0px;
 }
 
 @media (max-width: 768px) {
-    #bottom-bar{
+    #bottom-bar {
         display: flex;
     }
-    #bottom-bar.hidden{
+    #bottom-bar.hidden {
         display: none;
     }
 }
