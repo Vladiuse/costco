@@ -344,46 +344,6 @@
                                 </div>
                                 <!-- SLIDER -->
                                 <div class="slider-wrapper">
-
-                                    <style>
-                                        .slider-wrapper {
-                                            display: none;
-                                        }
-
-                                        .main-swiper {
-                                            width: 100%;
-                                        }
-
-                                        .main-swiper .swiper-slide img {
-                                            width: 100%;
-                                            display: block;
-                                        }
-
-                                        .thumbs-swiper {
-                                            margin-top: 10px;
-                                        }
-
-                                        .thumbs-swiper .swiper-slide {
-                                            width: 80px;
-                                            opacity: 0.5;
-                                            cursor: pointer;
-                                        }
-
-                                        .thumbs-swiper .swiper-slide-thumb-active {
-                                            opacity: 1;
-                                        }
-
-                                        .thumbs-swiper .swiper-slide img {
-                                            width: 100%;
-                                            display: block;
-                                        }
-
-                                        @media (max-width: 768px) {
-                                            .slider-wrapper {
-                                                display: block;
-                                            }
-                                        }
-                                    </style>
                                     <!-- MAIN -->
                                     <div class="swiper main-swiper">
                                         <div class="swiper-wrapper">
@@ -419,22 +379,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <script>
-                                        const thumbs = new Swiper(".thumbs-swiper", {
-                                            slidesPerView: 4,
-                                            spaceBetween: 8,
-                                            watchSlidesProgress: true,
-                                        });
-
-                                        const main = new Swiper(".main-swiper", {
-                                            slidesPerView: 1,
-                                            spaceBetween: 16,
-                                            thumbs: {
-                                                swiper: thumbs,
-                                            },
-                                        });
-                                    </script>
-
                                 </div>
                                 <!-- SLIDER -->
                                 <div class="product-spec product-spec-price">
@@ -1436,6 +1380,22 @@
         });
 
         observer.observe(target);
+    </script>
+    <script>
+        const thumbs = new Swiper(".thumbs-swiper", {
+            // slidesPerView: 4,
+            slidesPerView: "auto",
+            spaceBetween: 8,
+            watchSlidesProgress: true,
+        });
+
+        const main = new Swiper(".main-swiper", {
+            slidesPerView: 1.2,
+            spaceBetween: 16,
+            thumbs: {
+                swiper: thumbs,
+            },
+        });
     </script>
 </body>
 
