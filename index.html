@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="./assets/css/font.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -259,7 +264,7 @@
         <div id="product-block">
             <div class="container mpl-0 mpr-0">
                 <div class="product-cols">
-                    <div class="left desktop">
+                    <div class="left">
                         <div class="product-sticky">
                             <div class="desktop-product-images">
                                 <div class="desktop-product-image">
@@ -337,6 +342,101 @@
                                         <span>Write a review</span>
                                     </div>
                                 </div>
+                                <!-- SLIDER -->
+                                <div class="slider-wrapper">
+
+                                    <style>
+                                        .slider-wrapper {
+                                            display: none;
+                                        }
+
+                                        .main-swiper {
+                                            width: 100%;
+                                        }
+
+                                        .main-swiper .swiper-slide img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+
+                                        .thumbs-swiper {
+                                            margin-top: 10px;
+                                        }
+
+                                        .thumbs-swiper .swiper-slide {
+                                            width: 80px;
+                                            opacity: 0.5;
+                                            cursor: pointer;
+                                        }
+
+                                        .thumbs-swiper .swiper-slide-thumb-active {
+                                            opacity: 1;
+                                        }
+
+                                        .thumbs-swiper .swiper-slide img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+
+                                        @media (max-width: 768px) {
+                                            .slider-wrapper {
+                                                display: block;
+                                            }
+                                        }
+                                    </style>
+                                    <!-- MAIN -->
+                                    <div class="swiper main-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/1.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/2.jpeg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/4.jpeg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/3.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- THUMBS -->
+                                    <div class="swiper thumbs-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/1.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/2.jpeg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/4.jpeg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/3.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        const thumbs = new Swiper(".thumbs-swiper", {
+                                            slidesPerView: 4,
+                                            spaceBetween: 8,
+                                            watchSlidesProgress: true,
+                                        });
+
+                                        const main = new Swiper(".main-swiper", {
+                                            slidesPerView: 1,
+                                            spaceBetween: 16,
+                                            thumbs: {
+                                                swiper: thumbs,
+                                            },
+                                        });
+                                    </script>
+
+                                </div>
+                                <!-- SLIDER -->
                                 <div class="product-spec product-spec-price">
                                     <div class="product-spec-price__price-wrapper">
                                         <span class="product-spec-price__currency">$</span>
@@ -344,7 +444,7 @@
                                         <div class="product-spec-price__price-cents">99</div>
                                     </div>
                                     <div class="product-spec-price__discount-time">
-                                            <span>Price valid through 4/10/26</span>
+                                        <span>Price valid through 4/10/26</span>
                                     </div>
                                     <div class="product-spec-price__price-info">
                                         <span>Online Price</span>

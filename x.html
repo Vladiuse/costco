@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</head><div class="mob">
+                                    <!-- SLIDER -->
+                                    <style>
+                                        .main-swiper {
+                                            width: 100%;
+                                            overflow: hidden;
+                                        }
+
+                                        .main-swiper .swiper-slide img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+
+                                        .thumbs-swiper {
+                                            margin-top: 10px;
+                                        }
+
+                                        .thumbs-swiper .swiper-slide {
+                                            width: 80px;
+                                            opacity: 0.5;
+                                            cursor: pointer;
+                                        }
+
+                                        .thumbs-swiper .swiper-slide-thumb-active {
+                                            opacity: 1;
+                                        }
+
+                                        .thumbs-swiper .swiper-slide img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+                                    </style>
+                                    <!-- MAIN -->
+                                    <div class="swiper main-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/1.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/2.jpeg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/4.jpeg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/3.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- THUMBS -->
+                                    <div class="swiper thumbs-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/1.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/2.jpeg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/4.jpeg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/product/3.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        const thumbs = new Swiper(".thumbs-swiper", {
+                                            slidesPerView: 4,
+                                            spaceBetween: 8,
+                                            watchSlidesProgress: true,
+                                        });
+
+                                        const main = new Swiper(".main-swiper", {
+                                            slidesPerView: 1,
+                                            spaceBetween: 16,
+                                            thumbs: {
+                                                swiper: thumbs,
+                                            },
+                                        });
+                                    </script>
+                                    <!-- SLIDER -->
+                                </div>
+
+</html>

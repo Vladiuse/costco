@@ -465,6 +465,15 @@ footer hr {
     top: 0;
 }
 
+@media (max-width: 768px) {
+    .product-cols .left{
+        display: none;
+    }
+    .product-cols{
+        display: block;
+    }
+}
+
 .desktop-product-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
